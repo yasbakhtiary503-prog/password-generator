@@ -1,0 +1,259 @@
+:root {
+  /* Background Colors */
+
+  --bg-primary: #080808;
+  --bg-secondary: #11090c;
+  --bg-red-primary: #ff1744;
+  --bg-red-glow: #ff003c;
+
+  /* Other Colors */
+
+  --clr-primary: red;
+  --clr-bg-card: red;
+
+  --clr-text: #fff;
+  --clr-bg-button: linear-gradient();
+
+  --clr-border: rgba(255, 0, 0, 0.247);
+  /*------------------------------------------------------------------------
+     🔠 TYPOGRAPHY — Font Sizes
+     ------------------------------------------------------------------------ */
+
+  --fs-display: clamp(3.5rem, 8vw, 6.5rem); /* Extra large — Hero only */
+  --fs-h1: clamp(2.5rem, 5vw, 4.5rem);
+  --fs-h2: clamp(2rem, 4vw, 3rem);
+  --fs-h3: clamp(1.5rem, 3vw, 2rem);
+  --fs-h4: clamp(1.25rem, 2vw, 1.5rem);
+
+  --fs-body-lg: clamp(1.1rem, 1.2vw, 1.25rem);
+  --fs-body: clamp(1rem, 1vw, 1.125rem); /* Standard body text */
+
+  --fs-small: clamp(0.85rem, 0.9vw, 0.95rem); /* Captions */
+  --fs-xs: clamp(0.75rem, 0.8vw, 0.875rem); /* Badges */
+  --fs-caption: 0.75rem; /* Fixed size — no responsive scaling */
+
+  /* ------------------------------------------------------------------------
+     🔡 TYPOGRAPHY — Font Weights
+     ------------------------------------------------------------------------ */
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  /* ------------------------------------------------------------------------
+     📐 TYPOGRAPHY — Line Heights
+     ------------------------------------------------------------------------ */
+
+  --lh-tight: 1.15;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.75;
+
+  /* ------------------------------------------------------------------------
+     📏 SPACING — Responsive Spacing Scale
+     ------------------------------------------------------------------------ */
+
+  --space-3xs: clamp(0.125rem, 0.25vw, 0.25rem);
+  --space-2xs: clamp(0.25rem, 0.5vw, 0.5rem);
+  --space-xs: clamp(0.5rem, 1vw, 0.75rem);
+  --space-sm: clamp(0.75rem, 1.5vw, 1rem);
+  --space-md: clamp(1rem, 2vw, 1.5rem);
+  --space-lg: clamp(1.5rem, 3vw, 2rem);
+  --space-xl: clamp(2rem, 4vw, 3rem);
+  --space-2xl: clamp(3rem, 5vw, 4rem);
+  --space-3xl: clamp(4rem, 6vw, 6rem);
+  --space-4xl: clamp(5rem, 8vw, 8rem);
+
+  /* ------------------------------------------------------------------------
+     📦 LAYOUT — Container Widths
+     ------------------------------------------------------------------------ */
+
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1440px;
+  --container-3xl: 1600px;
+
+  /* ------------------------------------------------------------------------
+     📐 LAYOUT — Component Widths
+     ------------------------------------------------------------------------ */
+
+  --width-sidebar: 300px;
+  --width-card-min: 280px;
+  --width-navbar: 100%;
+
+  /* ------------------------------------------------------------------------
+     ◜ BORDER RADIUS — Corner Styles
+     ------------------------------------------------------------------------ */
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-full: 9999px;
+
+  /* ------------------------------------------------------------------------
+     🌑 BOX SHADOWS — Neutral Elevation
+     ------------------------------------------------------------------------ */
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-neutral: 0 6px 20px rgba(0, 0, 0, 0.5);
+
+  /* ------------------------------------------------------------------------
+     ✨ BOX SHADOWS — Accent & Colored Shadows
+     ------------------------------------------------------------------------ */
+
+  --shadow-primary: 0 10px 20px -5px rgba(24, 30, 75, 0.2);
+  --shadow-accent: 0 10px 20px -5px rgba(241, 165, 1, 0.3);
+
+  /* ------------------------------------------------------------------------
+     🌫️ EFFECTS — Backdrop Blur
+     ------------------------------------------------------------------------ */
+
+  --blur-sm: 4px;
+  --blur-md: 8px;
+  --blur-lg: 16px;
+  --blur-xl: 24px;
+
+  /* ------------------------------------------------------------------------
+     ⚡ ANIMATIONS — Transition Speeds
+     ------------------------------------------------------------------------ */
+
+  --transition-fast: 150ms ease-out;
+  --transition-base: 250ms ease-out;
+  --transition-slow: 500ms ease-out;
+
+  /* ------------------------------------------------------------------------
+     🌀 ANIMATIONS — Spring & Bounce Curves
+     ------------------------------------------------------------------------ */
+
+  --bounce-sm: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --bounce-md: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  /* ------------------------------------------------------------------------
+     ♿ ACCESSIBILITY — Focus Indicators
+     ------------------------------------------------------------------------ */
+
+  --outline-focus: 2px solid var(--clr-info);
+  --outline-offset: 2px;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+
+  background:
+    radial-gradient(
+      ellipse at 15% 20%,
+      color-mix(in srgb, var(--bg-red-glow), transparent 82%),
+      transparent 40%
+    ),
+    radial-gradient(
+      ellipse at 85% 80%,
+      color-mix(in srgb, var(--bg-red-primary), transparent 80%),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at center,
+      var(--bg-secondary) 0%,
+      #0c080a 45%,
+      var(--bg-primary) 100%
+    );
+
+  color: var(--clr-text);
+  font-family: sans-serif;
+
+  overflow-x: hidden;
+  position: relative;
+  isolation: isolate;
+}
+
+/* Red Ambient Glow */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background: linear-gradient(
+    135deg,
+    transparent 35%,
+    color-mix(in srgb, var(--bg-red-primary), transparent 96%) 50%,
+    transparent 65%
+  );
+
+  box-shadow: inset 0 0 150px
+    color-mix(in srgb, var(--bg-red-glow), transparent 92%);
+}
+
+/* Subtle Cyber Grid */
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+
+  background-size: 45px 45px;
+
+  mask-image: radial-gradient(ellipse at center, black 10%, transparent 80%);
+}
+
+button,
+input:checked {
+  border: none;
+  cursor: pointer;
+}
+
+:is(input, button, textarea, select) {
+  font-family: inherit;
+}
+
+:is(h1, h2, h3, h4) {
+  line-height: var(--lh-tight);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+h4 {
+  font-size: var(--fs-h4);
+}
+
+:is(button, p) {
+  font-size: var(--fs-body);
+}
