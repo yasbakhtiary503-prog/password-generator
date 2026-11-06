@@ -3,18 +3,29 @@
 
   --bg-primary: #080808;
   --bg-secondary: #11090c;
-  --bg-red-primary: #ff1744;
-  --bg-red-glow: #ff003c;
+  --bg-red-primary: #ff1717;
+  --bg-red-glow: #ff0000;
 
   /* Other Colors */
 
-  --clr-primary: red;
-  --clr-bg-card: red;
+  --clr-primary: rgb(255, 0, 0);
+  --clr-primary-dark: #ca0707;
+  --clr-primary-deep: #8a0909;
+
+  --clr-bg-card: rgba(255, 0, 0, 0.123);
+  --clr-bg-card-options: rgba(138, 0, 0, 0.397);
+  --clr-bg-input: rgb(54, 8, 8);
 
   --clr-text: #fff;
-  --clr-bg-button: linear-gradient();
-
-  --clr-border: rgba(255, 0, 0, 0.247);
+  --clr-icon-copy: ;
+  --clr-bg-button: linear-gradient(
+    110deg,
+    var(--clr-primary),
+    var(--clr-primary-dark),
+    var(--clr-primary-deep),
+    var(--clr-primary)
+  );
+  --clr-border: rgba(255, 0, 0, 0.911);
   /*------------------------------------------------------------------------
      🔠 TYPOGRAPHY — Font Sizes
      ------------------------------------------------------------------------ */
@@ -142,6 +153,8 @@
   /* ------------------------------------------------------------------------
      ♿ ACCESSIBILITY — Focus Indicators
      ------------------------------------------------------------------------ */
+  --outline-input: 2px solid rgb(194, 0, 0);
+  --outline-input-number: 1px solid rgba(255, 0, 0, 0.555);
 
   --outline-focus: 2px solid var(--clr-info);
   --outline-offset: 2px;
@@ -156,7 +169,7 @@
 }
 
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   place-items: center;
 
