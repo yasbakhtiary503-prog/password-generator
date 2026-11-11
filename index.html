@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111827" />
+    <meta
+      name="description"
+      content="Generate strong, secure, and customizable passwords instantly with this free password generator."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Your Name" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- To share the poject link on social media -->
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Password Generator" />
+    <meta
+      property="og:description"
+      content="Generate strong and secure passwords instantly."
+    />
+    <meta property="og:image" content="./image/og-image.png" />
+    <title>Password Generator</title>
+
+    <link rel="manifest" href="./manifest.json" />
+
+    <!-- Remix Icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- Links Css -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/respansive.css" />
+
+    <!-- Links Java Script -->
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="generator">
+      <h1 class="generator__title">
+        Password <span class="generator__title-highlight">Generator</span>
+      </h1>
+
+      <form class="password-form">
+        <div class="password-form__result-wrapper">
+          <input
+            type="text"
+            id="result"
+            class="password-form__result"
+            placeholder="Your generated password will appear here..."
+            spellcheck="false"
+            autocomplete="off"
+            autocapitalize="off"
+            aria-label="Generated password"
+            dir="ltr"
+          />
+          <button
+            class="password-form__copy-button"
+            type="button"
+            aria-label="Copy password"
+          >
+            <i
+              class="ri-file-copy-line password-form__copy-icon"
+              aria-hidden="true"
+            ></i>
+          </button>
+        </div>
+
+        <div class="password-options">
+          <div class="password-options__item">
+            <label
+              for="characterLength"
+              class="password-options__label password-options__label--length"
+            >
+              <i
+                class="ri-code-s-slash-line password-options__item-icon"
+                aria-hidden="true"
+              >
+              </i>
+              Password Length
+            </label>
+
+            <input
+              class="password-options__input-number"
+              type="number"
+              id="characterLength"
+              name="characterLength"
+              min="6"
+              max="20"
+              value="20"
+            />
+          </div>
+
+          <div class="password-options__item">
+            <input
+              type="checkbox"
+              id="include-lowercase"
+              name="includeLowercase"
+              checked
+              class="password-options__input-checkbox"
+            />
+            <label for="include-lowercase" class="password-options__label">
+              Include Lowercase Characters
+            </label>
+          </div>
+
+          <div class="password-options__item">
+            <input
+              type="checkbox"
+              id="include-uppercase"
+              name="includeUppercase"
+              checked
+              class="password-options__input-checkbox"
+            />
+            <label for="include-uppercase" class="password-options__label">
+              Include Uppercase Characters
+            </label>
+          </div>
+
+          <div class="password-options__item">
+            <input
+              type="checkbox"
+              id="include-numbers"
+              name="includeNumbers"
+              checked
+              class="password-options__input-checkbox"
+            />
+            <label for="include-numbers" class="password-options__label">
+              Include Numbers
+            </label>
+          </div>
+
+          <div class="password-options__item">
+            <input
+              type="checkbox"
+              id="include-symbols"
+              name="includeSymbols"
+              checked
+              class="password-options__input-checkbox"
+            />
+            <label for="include-symbols" class="password-options__label">
+              Include Symbols
+            </label>
+          </div>
+        </div>
+
+        <button class="password-form__generate-button" type="button">
+          Generate Password
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

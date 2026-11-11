@@ -1,0 +1,117 @@
+:root {
+  /* Background Colors */
+  --bg-red-primary: #8b0000;
+  --bg-red-glow: #ff0000;
+
+  /* Text Colors */
+  --clr-text: #fff;
+
+  /* Typography - Font Sizes */
+  --fs-h1: clamp(2.5rem, 5vw, 4.5rem);
+  --fs-h2: clamp(2rem, 4vw, 3rem);
+  --fs-h3: clamp(1.5rem, 3vw, 2rem);
+  --fs-h4: clamp(1.25rem, 2vw, 1.5rem);
+
+  --fs-body: clamp(1rem, 1vw, 1.125rem);
+
+  /* Typography - Line Heights */
+  --lh-tight: 1.15;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+
+  background:
+    radial-gradient(ellipse at 15% 20%, rgba(180, 0, 0, 0.22), transparent 45%),
+    radial-gradient(ellipse at 85% 80%, rgba(120, 0, 0, 0.25), transparent 45%),
+    radial-gradient(circle at center, #240000 0%, #100000 45%, #050000 100%);
+
+  color: var(--clr-text);
+  font-family: sans-serif;
+
+  overflow-x: hidden;
+  position: relative;
+  isolation: isolate;
+}
+
+/* Red Ambient Glow */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background: linear-gradient(
+    135deg,
+    transparent 35%,
+    color-mix(in srgb, var(--bg-red-primary), transparent 96%) 50%,
+    transparent 65%
+  );
+
+  box-shadow: inset 0 0 150px
+    color-mix(in srgb, var(--bg-red-glow), transparent 92%);
+}
+
+/* Subtle Cyber Grid */
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.065) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.065) 1px, transparent 1px);
+
+  background-size: 45px 45px;
+
+  mask-image: radial-gradient(ellipse at center, black 10%, transparent 80%);
+}
+
+button,
+input:checked {
+  border: none;
+  cursor: pointer;
+}
+
+:is(input, button, textarea, select) {
+  font-family: inherit;
+}
+
+:is(h1, h2, h3, h4) {
+  line-height: var(--lh-tight);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+h4 {
+  font-size: var(--fs-h4);
+}
+
+:is(button, p) {
+  font-size: var(--fs-body);
+}
