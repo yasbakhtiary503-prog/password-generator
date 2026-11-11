@@ -1,163 +1,21 @@
 :root {
   /* Background Colors */
-
-  --bg-primary: #080808;
-  --bg-secondary: #11090c;
-  --bg-red-primary: #ff1717;
+  --bg-red-primary: #8b0000;
   --bg-red-glow: #ff0000;
 
-  /* Other Colors */
-
-  --clr-primary: rgb(255, 0, 0);
-  --clr-primary-dark: #ca0707;
-  --clr-primary-deep: #8a0909;
-
-  --clr-bg-card: rgba(255, 0, 0, 0.123);
-  --clr-bg-card-options: rgba(138, 0, 0, 0.397);
-  --clr-bg-input: rgb(54, 8, 8);
-
+  /* Text Colors */
   --clr-text: #fff;
-  --clr-icon-copy: ;
-  --clr-bg-button: linear-gradient(
-    110deg,
-    var(--clr-primary),
-    var(--clr-primary-dark),
-    var(--clr-primary-deep),
-    var(--clr-primary)
-  );
-  --clr-border: rgba(255, 0, 0, 0.911);
-  /*------------------------------------------------------------------------
-     🔠 TYPOGRAPHY — Font Sizes
-     ------------------------------------------------------------------------ */
 
-  --fs-display: clamp(3.5rem, 8vw, 6.5rem); /* Extra large — Hero only */
+  /* Typography - Font Sizes */
   --fs-h1: clamp(2.5rem, 5vw, 4.5rem);
   --fs-h2: clamp(2rem, 4vw, 3rem);
   --fs-h3: clamp(1.5rem, 3vw, 2rem);
   --fs-h4: clamp(1.25rem, 2vw, 1.5rem);
 
-  --fs-body-lg: clamp(1.1rem, 1.2vw, 1.25rem);
-  --fs-body: clamp(1rem, 1vw, 1.125rem); /* Standard body text */
+  --fs-body: clamp(1rem, 1vw, 1.125rem);
 
-  --fs-small: clamp(0.85rem, 0.9vw, 0.95rem); /* Captions */
-  --fs-xs: clamp(0.75rem, 0.8vw, 0.875rem); /* Badges */
-  --fs-caption: 0.75rem; /* Fixed size — no responsive scaling */
-
-  /* ------------------------------------------------------------------------
-     🔡 TYPOGRAPHY — Font Weights
-     ------------------------------------------------------------------------ */
-
-  --fw-light: 300;
-  --fw-regular: 400;
-  --fw-medium: 500;
-  --fw-semibold: 600;
-  --fw-bold: 700;
-  --fw-black: 900;
-
-  /* ------------------------------------------------------------------------
-     📐 TYPOGRAPHY — Line Heights
-     ------------------------------------------------------------------------ */
-
+  /* Typography - Line Heights */
   --lh-tight: 1.15;
-  --lh-normal: 1.5;
-  --lh-relaxed: 1.75;
-
-  /* ------------------------------------------------------------------------
-     📏 SPACING — Responsive Spacing Scale
-     ------------------------------------------------------------------------ */
-
-  --space-3xs: clamp(0.125rem, 0.25vw, 0.25rem);
-  --space-2xs: clamp(0.25rem, 0.5vw, 0.5rem);
-  --space-xs: clamp(0.5rem, 1vw, 0.75rem);
-  --space-sm: clamp(0.75rem, 1.5vw, 1rem);
-  --space-md: clamp(1rem, 2vw, 1.5rem);
-  --space-lg: clamp(1.5rem, 3vw, 2rem);
-  --space-xl: clamp(2rem, 4vw, 3rem);
-  --space-2xl: clamp(3rem, 5vw, 4rem);
-  --space-3xl: clamp(4rem, 6vw, 6rem);
-  --space-4xl: clamp(5rem, 8vw, 8rem);
-
-  /* ------------------------------------------------------------------------
-     📦 LAYOUT — Container Widths
-     ------------------------------------------------------------------------ */
-
-  --container-sm: 640px;
-  --container-md: 768px;
-  --container-lg: 1024px;
-  --container-xl: 1280px;
-  --container-2xl: 1440px;
-  --container-3xl: 1600px;
-
-  /* ------------------------------------------------------------------------
-     📐 LAYOUT — Component Widths
-     ------------------------------------------------------------------------ */
-
-  --width-sidebar: 300px;
-  --width-card-min: 280px;
-  --width-navbar: 100%;
-
-  /* ------------------------------------------------------------------------
-     ◜ BORDER RADIUS — Corner Styles
-     ------------------------------------------------------------------------ */
-
-  --radius-xs: 4px;
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
-  --radius-2xl: 32px;
-  --radius-full: 9999px;
-
-  /* ------------------------------------------------------------------------
-     🌑 BOX SHADOWS — Neutral Elevation
-     ------------------------------------------------------------------------ */
-
-  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  --shadow-neutral: 0 6px 20px rgba(0, 0, 0, 0.5);
-
-  /* ------------------------------------------------------------------------
-     ✨ BOX SHADOWS — Accent & Colored Shadows
-     ------------------------------------------------------------------------ */
-
-  --shadow-primary: 0 10px 20px -5px rgba(24, 30, 75, 0.2);
-  --shadow-accent: 0 10px 20px -5px rgba(241, 165, 1, 0.3);
-
-  /* ------------------------------------------------------------------------
-     🌫️ EFFECTS — Backdrop Blur
-     ------------------------------------------------------------------------ */
-
-  --blur-sm: 4px;
-  --blur-md: 8px;
-  --blur-lg: 16px;
-  --blur-xl: 24px;
-
-  /* ------------------------------------------------------------------------
-     ⚡ ANIMATIONS — Transition Speeds
-     ------------------------------------------------------------------------ */
-
-  --transition-fast: 150ms ease-out;
-  --transition-base: 250ms ease-out;
-  --transition-slow: 500ms ease-out;
-
-  /* ------------------------------------------------------------------------
-     🌀 ANIMATIONS — Spring & Bounce Curves
-     ------------------------------------------------------------------------ */
-
-  --bounce-sm: cubic-bezier(0.34, 1.56, 0.64, 1);
-  --bounce-md: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-  /* ------------------------------------------------------------------------
-     ♿ ACCESSIBILITY — Focus Indicators
-     ------------------------------------------------------------------------ */
-  --outline-input: 2px solid rgb(194, 0, 0);
-  --outline-input-number: 1px solid rgba(255, 0, 0, 0.555);
-
-  --outline-focus: 2px solid var(--clr-info);
-  --outline-offset: 2px;
 }
 
 *,
@@ -174,22 +32,9 @@ body {
   place-items: center;
 
   background:
-    radial-gradient(
-      ellipse at 15% 20%,
-      color-mix(in srgb, var(--bg-red-glow), transparent 82%),
-      transparent 40%
-    ),
-    radial-gradient(
-      ellipse at 85% 80%,
-      color-mix(in srgb, var(--bg-red-primary), transparent 80%),
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at center,
-      var(--bg-secondary) 0%,
-      #0c080a 45%,
-      var(--bg-primary) 100%
-    );
+    radial-gradient(ellipse at 15% 20%, rgba(180, 0, 0, 0.22), transparent 45%),
+    radial-gradient(ellipse at 85% 80%, rgba(120, 0, 0, 0.25), transparent 45%),
+    radial-gradient(circle at center, #240000 0%, #100000 45%, #050000 100%);
 
   color: var(--clr-text);
   font-family: sans-serif;
@@ -229,8 +74,8 @@ body::after {
   pointer-events: none;
 
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.065) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.065) 1px, transparent 1px);
 
   background-size: 45px 45px;
 

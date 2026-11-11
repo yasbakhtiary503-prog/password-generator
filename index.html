@@ -3,7 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111827" />
+    <meta
+      name="description"
+      content="Generate strong, secure, and customizable passwords instantly with this free password generator."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Your Name" />
+
+    <!-- To share the poject link on social media -->
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Password Generator" />
+    <meta
+      property="og:description"
+      content="Generate strong and secure passwords instantly."
+    />
+    <meta property="og:image" content="./image/og-image.png" />
     <title>Password Generator</title>
+
+    <link rel="manifest" href="./manifest.json" />
 
     <!-- Remix Icon -->
     <link
@@ -13,7 +32,7 @@
     <!-- Links Css -->
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/respansive.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
 
     <!-- Links Java Script -->
     <script src="./app.js" defer></script>
@@ -32,7 +51,10 @@
             class="password-form__result"
             placeholder="Your generated password will appear here..."
             spellcheck="false"
+            autocomplete="off"
+            autocapitalize="off"
             aria-label="Generated password"
+            dir="ltr"
           />
           <button
             class="password-form__copy-button"
@@ -52,7 +74,11 @@
               for="characterLength"
               class="password-options__label password-options__label--length"
             >
-              <i class="ri-code-s-slash-line password-options__item-icon"> </i>
+              <i
+                class="ri-code-s-slash-line password-options__item-icon"
+                aria-hidden="true"
+              >
+              </i>
               Password Length
             </label>
 

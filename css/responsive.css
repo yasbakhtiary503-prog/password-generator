@@ -4,44 +4,17 @@
 
 /* ============== Mobile Full Screen ============== */
 
-@media (max-width: 50em) {
-  html,
-  body {
-    width: 100%;
-    min-height: 100%;
-    margin: 0;
-  }
-
-  body {
-    min-height: 100dvh;
-  }
-
+@media (max-width: 40em) {
   .generator {
-    width: 100%;
-    min-height: 100dvh;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    border: initial;
-    border-radius: initial;
+    width: fit-content;
   }
 
   .generator__title {
     margin-bottom: auto;
   }
-
-  .password-form {
-    flex: 1;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
 }
 
-/* ============== Touch Devices ============== */
+/*  Touch Devices  */
 
 @media (hover: none) {
   .generator:hover {
@@ -60,7 +33,7 @@
   }
 }
 
-/* ============== Accessibility ============== */
+/*  Accessibility  */
 
 @media (prefers-reduced-motion: reduce) {
   .generator,
